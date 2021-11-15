@@ -9,7 +9,41 @@
 </head>
 
 <body>
+    <script>
+        let basket = [
+            {
+                title: 'сумка',
+                price: 200,
+                count: 3
+            },
+            {
+                title: 'куртка',
+                price: 2500,
+                count: 1
+            },
+            {
+                title: 'брюки',
+                price: 2600,
+                count: 2
+            },
+            {
+                title: 'фудболка',
+                price: 400,
+                count: 7
+            }
+        ];
 
+        let all = 0;
+        basket.forEach((item) => {
+            let price = item.price;
+            let count = item.count;
+            console.log(`В вашем корзине ${item.title};
+                            количечтво ${count};
+                            общая сумма ${price * count}`);
+            all += (price * count);
+        });
+        console.log(`Итого: ${all}`);
+    </script>
 </body>
 
 </html>
